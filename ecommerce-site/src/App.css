@@ -1,38 +1,130 @@
+/* Общие стили для всего приложения */
 .App {
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Стили для Header */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-header nav {
+  margin-top: 10px;
+}
+
+.App-header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #61dafb;
+  font-size: 1rem;
+}
+
+.App-header nav a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Стили для Products */
+.Product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.Product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.Product-card p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.Product-card .price {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Стили для Footer */
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.App-footer a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.App-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для пагинации */
+.Pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.Pagination button {
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Pagination button:hover {
+  background-color: #21a1f1;
+}
+
+.Pagination button.active {
+  background-color: #21a1f1;
+  font-weight: bold;
 }

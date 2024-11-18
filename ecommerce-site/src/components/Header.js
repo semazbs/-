@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';  // Для прокрутки по странице
 import styled from 'styled-components';  // Для стилей
 import { FaShoppingCart } from 'react-icons/fa';  // Для иконки корзины
